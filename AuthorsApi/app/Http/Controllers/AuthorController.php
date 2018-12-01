@@ -51,7 +51,23 @@ class AuthorController extends Controller
 
     public function update(Request $request , $author)
     {
+      $author = Author::findOrFail($author);
 
+      $rules = [
+        'name' => 'max:255',
+        'gender' => 'max:255|in:male,female',
+        'country' => 'max:255'
+      ];
+      $this->validate($request , $rules);
+
+      $author->fill($request->all());
+      if($author->isClean())
+      {
+        return $this->errorResponse("At least one value must change" , Response::HTTP_UNPROCESSABLE_ENTITY);
+      }
+      $author->save();
+
+      return $this->succesResponse($author);
     }
 
     public function destroy($author)
