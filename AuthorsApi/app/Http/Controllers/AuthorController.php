@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Traits\ApiResponser;
 use Illuminate\Http\Request;
+use App\Author;
 
 class AuthorController extends Controller
 {
@@ -21,7 +22,9 @@ class AuthorController extends Controller
 
     public function index()
     {
+      $authors = Author::all();
 
+      return $this->succesResponse($author);
     }
 
     public function store(Request $request)
