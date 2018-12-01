@@ -15,4 +15,4 @@ $router->get('/authors' , 'AuthorController@index');
 $router->post('/authors' , 'AuthorController@store');
 $router->get('/authors/{author}' , 'AuthorController@show');
 $router->post('/authors/{author}/update' , 'AuthorController@update');
-$router->get('/authors/{author}/delete' , 'AuthorController@destroy');
+$router->delete('/authors/{author}' , 'AuthorController@destroy');
