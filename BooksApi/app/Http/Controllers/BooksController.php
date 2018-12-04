@@ -46,7 +46,9 @@ class BooksController extends Controller
 
     public function show($book)
     {
+      $book = Book::findOrFail($book);
 
+      return $this->succesResponse($book);
     }
 
     public function update(Request $request , $book)
