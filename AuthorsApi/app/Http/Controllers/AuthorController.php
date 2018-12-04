@@ -76,6 +76,6 @@ class AuthorController extends Controller
 
       $author->delete();
 
-      $this->succesResponse($author);
+      return $this->succesResponse($author);
     }
 }
