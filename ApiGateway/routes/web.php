@@ -14,11 +14,11 @@
 $router->get('/authors' , 'AuthorController@index');
 $router->post('/authors' , 'AuthorController@store');
 $router->get('/authors/{author}' , 'AuthorController@show');
-$router->patch('/authors/{author}/update' , 'AuthorController@update');
+$router->put('/authors/{author}' , 'AuthorController@update');
 $router->delete('/authors/{author}' , 'AuthorController@destroy');
 
 $router->get('/books' , 'BookController@index');
 $router->post('/books' , 'BookController@store');
 $router->get('/books/{book}' , 'BookController@show');
-$router->patch('/books/{book}/update' , 'BookController@update');
+$router->put('/books/{book}/update' , 'BookController@update');
 $router->delete('/books/{book}' , 'BookController@destroy');
