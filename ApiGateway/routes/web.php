@@ -11,6 +11,14 @@
 |
 */
 
-$router->get('/', function () use ($router) {
-    return $router->app->version();
-});
+$router->get('/authors' , 'AuthorController@index');
+$router->post('/authors' , 'AuthorController@store');
+$router->get('/authors/{author}' , 'AuthorController@show');
+$router->patch('/authors/{author}/update' , 'AuthorController@update');
+$router->delete('/authors/{author}' , 'AuthorController@destroy');
+
+$router->get('/books' , 'BooksController@index');
+$router->post('/books' , 'BooksController@store');
+$router->get('/books/{book}' , 'BooksController@show');
+$router->patch('/books/{book}/update' , 'BooksController@update');
+$router->delete('/books/{book}' , 'BooksController@destroy');
