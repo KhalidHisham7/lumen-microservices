@@ -47,6 +47,6 @@ class BookController extends Controller
 
     public function destroy($book)
     {
-
+      return $this->succesResponse($this->bookService->deleteBook($book));
     }
 }

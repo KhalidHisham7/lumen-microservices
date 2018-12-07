@@ -34,4 +34,9 @@ class BookService
   {
     return $this->performRequest('PUT' , "/books/{$book}", $data);
   }
+
+  public function deleteBook($book)
+  {
+    return $this->performRequest('DELETE' , "/books/{$book}");
+  }
 }
