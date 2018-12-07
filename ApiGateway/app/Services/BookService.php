@@ -19,4 +19,19 @@ class BookService
   {
     return $this->performRequest('GET' , '/books');
   }
+
+  public function createBook($data)
+  {
+    return $this->performRequest('POST' , '/books', $data);
+  }
+
+  public function obtainBook($book)
+  {
+    return $this->performRequest('GET' , "/books/{$book}");
+  }
+
+  public function editBook($data, $book)
+  {
+    return $this->performRequest('PUT' , "/books/{$book}", $data);
+  }
 }
