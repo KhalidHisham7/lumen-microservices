@@ -14,4 +14,9 @@ class AuthorService
   {
     $this->baseUri = config('services.authors.base_uri');
   }
+
+  public function obtainAuthors()
+  {
+    return $this->performRequest('GET' , '/authors');
+  }
 }

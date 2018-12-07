@@ -14,4 +14,9 @@ class BookService
   {
     $this->baseUri = config('services.books.base_uri');
   }
+
+  public function obtainBooks()
+  {
+    return $this->performRequest('GET' , '/books');
+  }
 }

@@ -17,8 +17,8 @@ $router->get('/authors/{author}' , 'AuthorController@show');
 $router->patch('/authors/{author}/update' , 'AuthorController@update');
 $router->delete('/authors/{author}' , 'AuthorController@destroy');
 
-$router->get('/books' , 'BooksController@index');
-$router->post('/books' , 'BooksController@store');
-$router->get('/books/{book}' , 'BooksController@show');
-$router->patch('/books/{book}/update' , 'BooksController@update');
-$router->delete('/books/{book}' , 'BooksController@destroy');
+$router->get('/books' , 'BookController@index');
+$router->post('/books' , 'BookController@store');
+$router->get('/books/{book}' , 'BookController@show');
+$router->patch('/books/{book}/update' , 'BookController@update');
+$router->delete('/books/{book}' , 'BookController@destroy');
